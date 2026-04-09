@@ -1,38 +1,62 @@
 # Changelog
 
-All notable changes to the **Gemini CLI Skills Toolkit** will be documented in this file.
+All notable changes to **Qwen Skills** will be documented in this file.
 
 ---
 
-## [2026.04.07] - The Great Convergence & LLM Wiki Engine
+## [2.0.0] — 2026-04-09
+
+### Complete Repository Rebuild
+
+Migrated from Gemini CLI skills to Qwen Code skills with full reorganization and cleanup.
 
 ### Added
-- **🔥 LLM Knowledge Engine**: 
-    - `llm-wiki-compiler`: Automated knowledge compilation logic inspired by Andrej Karpathy.
-    - `obsidan`: Advanced vault management and sync skills.
-    - `incremental-ingest`: Dynamic state-based knowledge ingestion.
-- **🧠 Strategy & Product Intelligence**: Massive infusion of 50+ professional tools.
-    - `product-strategy`, `swot-analysis`, `startup-canvas`, `create-prd`, `market-sizing`, `porters-five-forces`, `pestle-analysis`.
-- **🛠️ General Utility**:
-    - `llm-wiki-app`: Source code for the Knowledge Dashboard web application.
-    - `sys-admin-suite`: Expanded tools for system maintenance and environment cleanup.
+- **155 skills** across 8 professional categories
+- **492 source files** totaling 124,184 lines of skill definitions, references, and evaluations
+- **llm-wiki-compiler**: Automated knowledge compilation with `check_new_files.py` and `update_state.py` (22 directory watchers, 6,007 files indexed)
+- **60+ skills with reference libraries**: Playbooks, templates, and examples
+- **30+ skills with eval suites**: Automated evaluation test cases
 
-### Changed
-- **Massive Synchronization**: Synchronized over 120+ specialized skills from local workspace to GitHub.
-- **README v3.0**: Redesigned the landing page to feature the Knowledge Engine and Strategy categories.
-- **Enhanced Categorization**: Reorganized the entire library into more granular professional domains.
+### New Categories
+- **Marketing & Growth** (25): SEO, content, ads, email, CRO
+- **Product Management** (20): PRD, user stories, prioritization, roadmaps
+- **Development** (15): Code review, TDD, debugging, Git workflows
+- **Design & Presentations** (10): PPT, PDF, XLSX, DOCX generation
+- **Data & Analytics** (10): Cohort analysis, sentiment, SQL, dashboards
+- **AI & LLM** (8): Wiki compiler, AI SEO, model routing
+- **Business & Strategy** (15): Competitive analysis, pricing, monetization
+- **Communication & Writing** (12): Copywriting, editing, meeting summaries
+
+### Updated
+- **LLM Wiki App v2.1**: Complete graph rebuild with 1,810 wikilinks extracted (Karpathy pattern), 1,616 graph links across 1,343 nodes
+- **Dashboard v2.1**: Changelog feed, directory navigation, knowledge density metrics, isolated node detection
+- **Skill consolidation**: Merged 32 overlapping skills into 9 unified skills (19% redundancy reduction)
 
 ### Fixed
-- **Circular Reference in UI**: Fixed a critical TypeScript export issue in the `llm-wiki-app` frontend.
-- **Vite Connectivity**: Optimized Vite server configuration for enhanced cross-environment access (0.0.0.0).
+- `update_state.py` path sync with `check_new_files.py` (22 directories)
+- TypeScript compilation errors in frontend components
+- Circular dependency in graph data parser
+- Vite connectivity issues with node_modules corruption
+
+### Removed
+- Legacy Gemini-specific configurations
+- Duplicate skills: `brainstorm-experiments-existing/new`, `brainstorm-ideas-existing/new` → unified `brainstorm`
+- Outdated OpenClaw/ZeroClaw dependencies
 
 ---
 
-## [2026.03.24] - Global Cleanup & Core Sync
-- Introduced AI Operations & Logic category.
-- Purged legacy OpenClaw/ZeroClaw dependencies.
-- Enhanced security by removing hardcoded API keys.
+## [1.5.0] — 2026-04-07
+
+### LLM Knowledge Engine
+- `llm-wiki-compiler`: Karpathy-inspired knowledge compilation
+- `obsidan`: Obsidian vault management
+- Strategy skills infusion: `product-strategy`, `swot-analysis`, `startup-canvas`, `market-sizing`
+- Mass sync: 120+ skills from local workspace
 
 ---
-## [Legacy] - Initial Release
-- Initial set of 40+ skills covering SEO, CRO, and basic Productivity.
+
+## [1.0.0] — 2026-03-24
+
+### Initial Release
+- 40+ skills covering SEO, CRO, and productivity
+- Core framework: skill definitions, evals, references structure
